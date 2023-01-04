@@ -1,0 +1,27 @@
+.container {
+  background: url("./assets/banner.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 35rem);
+}
+
+.content {
+  padding: 2rem;
+
+  p {
+    margin-top: 4rem;
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3rem;
+  }
+
+  span {
+    background: var(--red500);
+    padding: 1rem 2rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    margin-top: 3rem;
+  }
+}

@@ -1,0 +1,26 @@
+.label {
+  background: #2d2828;
+  padding: 1rem;
+  border-radius: 2rem;
+  border: 0;
+  width: 30rem;
+  flex: 1;
+
+  display: flex;
+
+  input {
+    background: transparent;
+    border: 0;
+    color: white;
+    width: 100%;
+    margin-left: 0.5rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  img {
+    margin-right: 0.5rem;
+  }
+}

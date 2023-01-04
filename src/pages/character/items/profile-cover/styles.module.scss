@@ -1,0 +1,40 @@
+.background {
+  height: 300px;
+}
+
+.header {
+  position: absolute;
+  margin-top: 8rem;
+
+  padding: 2.5rem;
+}
+
+.headerContent {
+  display: flex;
+
+  img {
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 30rem;
+    border: 4px solid white;
+  }
+}
+
+.description {
+  margin-left: 2rem;
+  width: 600px;
+
+  .title {
+    font-size: 4rem;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+  }
+
+  .text {
+    margin-top: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}

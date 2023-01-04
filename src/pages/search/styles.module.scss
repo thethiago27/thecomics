@@ -1,0 +1,47 @@
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container {
+  padding: 3rem;
+}
+
+.comics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 2rem;
+
+  button {
+    background: white;
+    margin-right: 1rem;
+    font-weight: bold;
+    color: black;
+    border: 3px solid black;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 200px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+
+    &.active {
+      background: black;
+      color: white;
+    }
+  }
+}

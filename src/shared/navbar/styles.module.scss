@@ -1,0 +1,9 @@
+.navbar {
+  background: var(--gray500);
+  padding: 2rem;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+  }
+}
