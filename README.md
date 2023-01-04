@@ -11,8 +11,9 @@ Uma aplicação completa que consome a API da Marvel
 ## Instalação
 
 Front End
+
 ```bash
-    git clone 
+    git clone
     npm install
     npm run dev
 ```

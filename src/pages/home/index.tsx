@@ -24,13 +24,13 @@ const Home = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await get("comics");
+        const response: any = await get("comics");
 
         setAsyncComics({
           status: "loaded",
           data: response.results,
         });
-      } catch (e) {
+      } catch (e: any) {
         setAsyncComics({ status: "error", data: { message: e.message } });
       }
     })();

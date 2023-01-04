@@ -4,12 +4,13 @@ import styles from "./styles.module.scss";
 interface AsyncContainerProps {
   status: string;
   children: ReactNode;
+  className?: string;
 }
 
 export const AsyncContainer = ({
   status,
   children,
-  ...rest
+  className,
 }: AsyncContainerProps) => {
   if (status === "loading") {
     return (
@@ -23,5 +24,5 @@ export const AsyncContainer = ({
     return <div>Error...</div>;
   }
 
-  return <div {...rest}>{children}</div>;
+  return <div className={className}>{children}</div>;
 };

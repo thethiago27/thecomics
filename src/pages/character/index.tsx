@@ -40,16 +40,18 @@ const Character = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await get(`characters/${id}`);
+        const response: any = await get(`characters/${id}`);
 
         if (response.results) {
-          const comics = response.results[0].comics.items.map(async (comic) => {
-            const comicId = comic.resourceURI.split("/").pop();
+          const comics: any = response.results[0].comics.items.map(
+            async (comic: any) => {
+              const comicId = comic.resourceURI.split("/").pop();
 
-            const response = await get(`comics/${comicId}`);
+              const response: any = await get(`comics/${comicId}`);
 
-            return response.results;
-          });
+              return response.results;
+            }
+          );
 
           const character = {
             character: response.results[0],
@@ -61,7 +63,7 @@ const Character = () => {
             data: character,
           });
         }
-      } catch (e) {
+      } catch (e: any) {
         setAsyncCharacter({ status: "error", data: { message: e.message } });
       }
     })();
@@ -82,7 +84,7 @@ const Character = () => {
             <div className={styles.content}>
               <p className={styles.title}>All Comics</p>
               <div className={styles.comics}>
-                {asyncCharacter.data.comics.map((comic) => (
+                {asyncCharacter.data.comics.map((comic: any) => (
                   <HeroBox hero={comic[0]} url="comics" key={comic[0].id} />
                 ))}
               </div>

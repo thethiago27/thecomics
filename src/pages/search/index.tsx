@@ -18,7 +18,6 @@ type Comics = {
 
 type SearchType = "comics" | "characters";
 const Search = () => {
-
   const { search } = useParams();
 
   const [asyncComics, setAsyncComics] = useState<AsyncData<Comics[]>>({
@@ -30,7 +29,7 @@ const Search = () => {
     setAsyncComics({ status: "loading" });
     (async () => {
       try {
-        const response =
+        const response: any =
           searchType === "comics"
             ? await get("comics", { titleStartsWith: search })
             : await get("characters", { nameStartsWith: search });
@@ -39,8 +38,11 @@ const Search = () => {
           status: "loaded",
           data: response.results,
         });
-      } catch (e) {
-        setAsyncComics({status: "error", data: {message: "Error while fetching data"}});
+      } catch (e: any) {
+        setAsyncComics({
+          status: "error",
+          data: { message: "Error while fetching data" },
+        });
       }
     })();
   }, [searchType, search]);
@@ -52,7 +54,7 @@ const Search = () => {
           <p>Result of your search...</p>
         </div>
         <div className={styles.buttons}>
-          {Array.from(["comics", "characters"]).map((type: SearchType) => (
+          {Array.from(["comics", "characters"]).map((type: any) => (
             <button
               key={type}
               className={searchType === type ? styles.active : ""}

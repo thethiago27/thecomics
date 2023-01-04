@@ -43,19 +43,20 @@ const Comics = () => {
   useEffect(() => {
     (async () => {
       try {
-        const response = await get(`comics/${id}`);
+        const response: any = await get(`comics/${id}`);
 
         if (response.results) {
-
           const { characters } = response.results[0];
 
-          const charactersList = characters.items.map(async (character) => {
-            const characterId = character.resourceURI.split("/").pop();
+          const charactersList = characters.items.map(
+            async (character: any) => {
+              const characterId = character.resourceURI.split("/").pop();
 
-            const response = await get(`characters/${characterId}`);
+              const response: any = await get(`characters/${characterId}`);
 
-            return response.results && response.results[0];
-          });
+              return response.results && response.results[0];
+            }
+          );
 
           const data = {
             characters: await Promise.all(charactersList),
@@ -64,7 +65,7 @@ const Comics = () => {
 
           setAsyncComics({ status: "loaded", data });
         }
-      } catch (e) {
+      } catch (e: any) {
         console.error("MarvelAPI#Error", e);
         setAsyncComics({ status: "error", data: { message: e.message } });
       }
@@ -95,6 +96,7 @@ const Comics = () => {
                   <img
                     src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
                     onClick={() => navigate(`/characters/${character.id}`)}
+                    alt={character.name}
                   />
                   <p>{character.name}</p>
                 </div>

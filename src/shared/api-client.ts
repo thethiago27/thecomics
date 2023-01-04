@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios";
 import md5 from "crypto-js/md5";
 import { stringify } from "qs";
 
@@ -28,7 +28,7 @@ export const fetcher = async <T>(
   try {
     const { hash, ts, publicKey } = getHash();
 
-    const response = await call(
+    const response: any = await call(
       `${url}?ts=${ts}&apikey=${publicKey}&hash=${hash}${
         params ? `&${stringify(params)}` : ""
       }`
