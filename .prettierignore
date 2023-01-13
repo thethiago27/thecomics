@@ -7,3 +7,4 @@ bitbucket-pipelines.yml
 tsconfig.json
 tsconfig.node.json
 package.json
+.next

@@ -1,25 +1,16 @@
 import styles from "./styles.module.scss";
-import save from "./assets/save.svg";
-import { Link } from "react-router-dom";
-
-type Comics = {
-  thumbnail: {
-    path: string;
-    extension: string;
-  };
-  title: string;
-  id: string;
-};
+import Link from "next/link";
+import { Comic } from "../../interface/Comic";
 
 interface HeroBoxProps {
-  hero: Comics;
+  hero: Comic;
   url: "comics" | "characters";
 }
 
 const HeroBox = ({ hero, url }: HeroBoxProps) => {
   return (
     <div className={styles.container}>
-      <Link to={`/${url}/${hero.id}`}>
+      <Link href={`/${url}/${hero.id}`}>
         <img
           src={`${hero.thumbnail.path}.${hero.thumbnail.extension}`}
           alt={hero.title}

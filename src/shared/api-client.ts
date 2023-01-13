@@ -3,11 +3,11 @@ import md5 from "crypto-js/md5";
 import { stringify } from "qs";
 
 if (
-  !import.meta.env.VITE_MARVEL_PUBLIC_KEY ||
-  !import.meta.env.VITE_MARVEL_PRIVATE_KEY
+  !process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY ||
+  !process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY
 ) {
   throw new Error(
-    "VITE_MARVEL_PRIVATE_KEY and VITE_MARVEL_PUBLIC_KEY must be set"
+    "NEXT_PUBLIC_MARVEL_PUBLIC_KEY and VITE_MARVEL_PUBLIC_KEY must be set"
   );
 }
 
@@ -59,8 +59,8 @@ type Hash = {
 export const getHash = (): Hash => {
   const ts = new Date().getTime();
 
-  const publicKey = import.meta.env.VITE_MARVEL_PUBLIC_KEY;
-  const privateKey = import.meta.env.VITE_MARVEL_PRIVATE_KEY;
+  const publicKey = process.env.NEXT_PUBLIC_MARVEL_PUBLIC_KEY || "";
+  const privateKey = process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY || "";
 
   const hash = md5(ts + privateKey + publicKey).toString();
 

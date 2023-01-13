@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="183dbbae-260b-4aa1-b381-910af75c0c22" name="Changes" comment="refactor: build with nextjs">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__mocks__/fileMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__mocks__/styleMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local/run_dev.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/Character.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface/Comic.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/_document.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/characters/[id].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/comics/[id].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/search/[search].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/character-image/character-image.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/character-image/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/character-image/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/comic-description/comic-description.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/comic-description/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/comic-description/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/container/Container.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/container/container.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/container/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/hero-banner/hero-banner.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/hero-box/hero-box.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/layout/layout.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/navbar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/navbar/items/button-github/assets/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/navbar/items/button-github/button-github.spec.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/stack-grid/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/tab-button/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/tab-button/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/title/Title.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/title/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/Home.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/character/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/character/items/profile-cover/ProfileCover.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/profile-cover/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/character/items/profile-cover/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/profile-cover/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/character/styles.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/comics/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/comics/styles.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/items/hero-banner/HeroBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hero-banner/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/items/hero-banner/assets/banner.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hero-banner/assets/banner.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/items/hero-banner/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/items/hero-banner/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hero-banner/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/home/styles.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/search/index.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/search/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/api-client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/api-client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/async-container/AsyncContainer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/async-container/models/async-data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/async-container/models/error-data.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/async-container/styles.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/hero-box/HeroBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hero-box/HeroBox.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/hero-box/assets/save-full.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/hero-box/assets/save.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/hero-box/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/hero-box/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/layout/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/layout/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/layout/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/layout/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/assets/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/button-signin/ButtonSignIn.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/navbar/items/button-github/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/button-signin/assets/link.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/link.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/button-signin/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/button-signin/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/navbar/items/button-github/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/search-input/SearchInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/navbar/items/search-input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/search-input/assets/search.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/icons/search.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/navbar/items/search-input/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.node.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JBg0BtqA9Hweah941R4VcIlT9j" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/thiago/thecomics/src/pages/search",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.jest.jest_package": "/home/thiago/thecomics/node_modules/jest",
+    "nodejs_interpreter_path": "/home/thiago/.nvm/versions/node/v16.16.0/bin/node",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/home/thiago/thecomics/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/home/thiago/thecomics/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pages/search" />
+      <recent name="$PROJECT_DIR$/src/shared/hero-banner" />
+      <recent name="$PROJECT_DIR$/src/shared/layout" />
+      <recent name="$PROJECT_DIR$/public/assets/icons" />
+      <recent name="$PROJECT_DIR$/src/shared/profile-cover" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/src/shared/navbar/items/button-signin/assets" />
+      <recent name="$PROJECT_DIR$/src/shared/navbar/assets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Jest.Github Button Component.Should render the Github Button with the correct link">
+    <configuration name="Github Button Component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/shared/navbar/items/button-github/button-github.spec.tsx" />
+      <test-names>
+        <test-name value="Github Button Component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Github Button Component.Should render the Github Button with the correct link" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/shared/navbar/items/button-github/button-github.spec.tsx" />
+      <test-names>
+        <test-name value="Github Button Component" />
+        <test-name value="Should render the Github Button with the correct link" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Hero Banner Component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/shared/hero-box/hero-box.spec.tsx" />
+      <test-names>
+        <test-name value="Hero Banner Component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Layout Component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/shared/layout/layout.spec.tsx" />
+      <test-names>
+        <test-name value="Layout Component" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="Layout Component.Should render the Container Component with children" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/shared/layout/layout.spec.tsx" />
+      <test-names>
+        <test-name value="Layout Component" />
+        <test-name value="Should render the Container Component with children" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Jest.Github Button Component.Should render the Github Button with the correct link" />
+        <item itemvalue="Jest.Layout Component" />
+        <item itemvalue="Jest.Github Button Component" />
+        <item itemvalue="Jest.Layout Component.Should render the Container Component with children" />
+        <item itemvalue="Jest.Hero Banner Component" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="183dbbae-260b-4aa1-b381-910af75c0c22" name="Changes" comment="" />
+      <created>1671556664364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671556664364</updated>
+      <workItem from="1671556665516" duration="1314000" />
+      <workItem from="1671573108219" duration="1098000" />
+      <workItem from="1671662584010" duration="3030000" />
+      <workItem from="1671731251315" duration="2741000" />
+      <workItem from="1672072927974" duration="12091000" />
+      <workItem from="1672085547268" duration="12467000" />
+      <workItem from="1672169858067" duration="8970000" />
+      <workItem from="1672852973422" duration="618000" />
+      <workItem from="1672853763199" duration="2034000" />
+      <workItem from="1673470892405" duration="13626000" />
+      <workItem from="1673625297846" duration="17060000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: add readme.me">
+      <created>1672854674951</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672854674951</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: ts errors fix">
+      <created>1672855569565</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672855569565</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: add readme.me" />
+    <MESSAGE value="chore: ts errors fix" />
+    <MESSAGE value="refactor: build with nextjs" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: build with nextjs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/shared/hero-box/hero-box.spec.tsx</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
