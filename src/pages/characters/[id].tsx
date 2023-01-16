@@ -8,11 +8,13 @@ import Title from "../../components/title/Title";
 import Container from "../../components/container/Container";
 import StackGrid from "../../components/stack-grid";
 import HeroBox from "../../components/hero-box";
+import Head from "next/head";
+import DynamicHead from "../../components/dynamic-head";
 
 export const getStaticPaths = async () => {
   return {
-    paths: [{ params: { id: "1009610" } }],
-    fallback: true,
+    paths: [],
+    fallback: "blocking",
   };
 };
 
@@ -49,6 +51,11 @@ type CharactersDetailsProps = {
 const CharactersDetails = ({ comics, character }: CharactersDetailsProps) => {
   return (
     <Layout>
+      <DynamicHead
+        title={character?.name}
+        description={character?.description}
+        image={`${character.thumbnail.path}.${character.thumbnail.path}`}
+      />
       <ProfileCover image={character?.thumbnail} name={character?.name} />
       <Container>
         <Title>All Comics</Title>

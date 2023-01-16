@@ -15,7 +15,7 @@ const ComicDescription = ({ comic }: ComicDescriptionProps) => {
       />
       <div className={styles.description}>
         <Title>{comic?.title}</Title>
-        {comic?.description.length > 0 ? (
+        {comic?.description?.length > 0 ? (
           <p className={styles.short}>{comic?.description}</p>
         ) : (
           <p className={styles.short}>No description available</p>

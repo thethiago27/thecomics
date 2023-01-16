@@ -1,4 +1,4 @@
-import CharactersDetails from "./[id]";
+import CharactersDetails from "../src/pages/characters/[id]";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 

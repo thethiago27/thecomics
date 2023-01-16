@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import HeroBox from "./index";
+import Index from "./index";
 
 describe("Hero Banner Component", () => {
   it("Should render the Hero Box with comic URL", () => {
@@ -14,7 +14,7 @@ describe("Hero Banner Component", () => {
       id: "id",
     };
 
-    render(<HeroBox hero={props} url="comics" />);
+    render(<Index hero={props} url="comics" />);
 
     const characterName = screen.getByText(/name/i);
     const comicUrl = screen.getByRole("link");
@@ -34,7 +34,7 @@ describe("Hero Banner Component", () => {
       id: "id",
     };
 
-    render(<HeroBox hero={props} url="characters" />);
+    render(<Index hero={props} url="characters" />);
 
     const characterName = screen.getByText(/name/i);
     const comicUrl = screen.getByRole("link");

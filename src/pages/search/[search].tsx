@@ -7,7 +7,7 @@ import styles from "./styles.module.scss";
 import TabButton from "../../components/tab-button";
 import { get } from "../../services/api-client";
 import { Comic } from "../../interface/Comic";
-import HeroBox from "../../components/hero-box";
+import Index from "../../components/hero-box";
 import StackGrid from "../../components/stack-grid";
 import CharacterImage from "../../components/character-image";
 import { Character } from "../../interface/Character";
@@ -66,7 +66,7 @@ const Search = () => {
           {searchTab === "comics" && (
             <StackGrid columns={3}>
               {comics.map((comic) => (
-                <HeroBox hero={comic} url="comics" key={comic.id} />
+                <Index hero={comic} url="comics" key={comic.id} />
               ))}
             </StackGrid>
           )}

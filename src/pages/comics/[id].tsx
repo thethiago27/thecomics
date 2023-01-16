@@ -8,20 +8,43 @@ import { Comic } from "../../interface/Comic";
 import { Character } from "../../interface/Character";
 import StackGrid from "../../components/stack-grid";
 import CharacterImage from "../../components/character-image";
+import Head from "next/head";
+import DynamicHead from "../../components/dynamic-head";
 
 type ComicDetailsProps = {
   comic: Comic;
   characters: Character[];
 };
 
+const ComicsDetails = ({ comic, characters }: ComicDetailsProps) => {
+  return (
+    <Layout>
+      <DynamicHead
+        title={comic.title}
+        description={comic.description}
+        image={`${comic.thumbnail.path}.${comic.thumbnail.path}`}
+      />
+      <Container>
+        <ComicDescription comic={comic} />
+        <Title>Characters</Title>
+        <StackGrid columns={4}>
+          {characters?.map((character) => (
+            <CharacterImage key={character.id} character={character} />
+          ))}
+        </StackGrid>
+      </Container>
+    </Layout>
+  );
+};
+
 export const getStaticPaths = async () => {
   return {
-    paths: [{ params: { id: "1590" } }, { params: { id: "1308" } }],
-    fallback: true,
+    paths: [],
+    fallback: "blocking",
   };
 };
 export const getStaticProps: GetStaticProps = async (context) => {
-  const id = context.params?.id || "";
+  const { id }: any = context.params;
 
   const response: any = await get(`/comics/${id}`);
   const result = response.results && response.results[0];
@@ -40,28 +63,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       characters: characters,
     },
   };
-};
-
-const ImageCharacterGrid = ({ characters }: { characters: Character[] }) => {
-  return (
-    <StackGrid columns={4}>
-      {characters?.map((character) => (
-        <CharacterImage key={character.id} character={character} />
-      ))}
-    </StackGrid>
-  );
-};
-
-const ComicsDetails = ({ comic, characters }: ComicDetailsProps) => {
-  return (
-    <Layout>
-      <Container>
-        <ComicDescription comic={comic} />
-        <Title>Characters</Title>
-        <ImageCharacterGrid characters={characters} />
-      </Container>
-    </Layout>
-  );
 };
 
 export default ComicsDetails;

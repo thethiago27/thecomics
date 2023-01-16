@@ -4,9 +4,10 @@ import Container from "../components/container/Container";
 import HeroBanner from "../components/hero-banner";
 import { GetServerSideProps } from "next";
 import { get } from "../services/api-client";
-import HeroBox from "../components/hero-box";
+import Index from "../components/hero-box";
 import StackGrid from "../components/stack-grid";
 import { Comic } from "../interface/Comic";
+import DynamicHead from "../components/dynamic-head";
 
 type ComicsProps = {
   comics: Comic[];
@@ -16,7 +17,7 @@ const ComicsGrid = ({ comics }: ComicsProps) => {
   return (
     <StackGrid columns={3}>
       {comics.map((comic) => (
-        <HeroBox key={comic.id} hero={comic} url="comics" />
+        <Index key={comic.id} hero={comic} url="comics" />
       ))}
     </StackGrid>
   );
