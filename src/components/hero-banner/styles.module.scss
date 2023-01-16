@@ -3,6 +3,10 @@
   background-size: cover;
   width: 100%;
   height: calc(100vh - 35rem);
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 20rem);
+  }
 }
 
 .content {

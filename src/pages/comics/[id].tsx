@@ -22,7 +22,7 @@ const ComicsDetails = ({ comic, characters }: ComicDetailsProps) => {
       <DynamicHead
         title={comic.title}
         description={comic.description}
-        image={`${comic.thumbnail.path}.${comic.thumbnail.path}`}
+        image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
       />
       <Container>
         <ComicDescription comic={comic} />

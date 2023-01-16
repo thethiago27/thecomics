@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import styles from "./styles.module.scss";
 
 interface StackGridProps {
   children: ReactNode;
@@ -9,11 +10,9 @@ const StackGrid = ({ columns, children }: StackGridProps) => {
   return (
     <div
       style={{
-        display: "grid",
         gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        gridGap: "2rem",
-        marginTop: "3rem",
       }}
+      className={styles.grid}
     >
       {children}
     </div>

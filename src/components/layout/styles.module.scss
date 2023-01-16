@@ -1,6 +1,11 @@
 .container {
   padding-left: 20rem;
   padding-right: 20rem;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .content {

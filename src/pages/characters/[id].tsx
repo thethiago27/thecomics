@@ -54,7 +54,7 @@ const CharactersDetails = ({ comics, character }: CharactersDetailsProps) => {
       <DynamicHead
         title={character?.name}
         description={character?.description}
-        image={`${character.thumbnail.path}.${character.thumbnail.path}`}
+        image={`${character.thumbnail.path}.${character.thumbnail.extension}`}
       />
       <ProfileCover image={character?.thumbnail} name={character?.name} />
       <Container>
