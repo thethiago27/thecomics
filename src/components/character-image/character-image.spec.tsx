@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import CharacterImage from ".";
+import CharacterImage from "./index";
 
 jest.mock("next/router", () => ({
   useRouter: jest.fn(),

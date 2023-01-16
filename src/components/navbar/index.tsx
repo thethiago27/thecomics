@@ -7,12 +7,13 @@ const Navbar = () => {
   const router = useRouter();
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} data-testid="navbar">
       <div className={styles.content}>
         <img
           src="/assets/logo.svg"
           alt="logo"
           onClick={() => router.push("/")}
+          data-testid="logo"
         />
         <SearchInput />
         <ButtonSignIn />

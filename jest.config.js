@@ -1,4 +1,10 @@
-module.exports = {
+const nextJest = require("next/jest");
+
+const createJestConfig = nextJest({
+  dir: "./",
+});
+
+const customJestConfig = {
   collectCoverage: true,
   coverageProvider: "v8",
   collectCoverageFrom: [
@@ -14,6 +20,8 @@ module.exports = {
     "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
     "^.+\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
     "^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$/i": `<rootDir>/__mocks__/fileMock.js`,
+    "^@/pages/(.*)$": "<rootDir>/src/pages/$1",
+    "^@/components/(.*)$": "<rootDir>/src/components/$1",
   },
   testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
   testEnvironment: "jsdom",
@@ -25,3 +33,5 @@ module.exports = {
     "^.+\\.module\\.(css|sass|scss)$",
   ],
 };
+
+module.exports = createJestConfig(customJestConfig);

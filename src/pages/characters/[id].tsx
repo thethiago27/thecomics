@@ -1,13 +1,13 @@
 import { GetStaticProps } from "next";
-import Layout from "../../shared/layout";
-import ProfileCover from "../../shared/profile-cover";
-import { get } from "../../shared/api-client";
+import Layout from "../../components/layout";
+import ProfileCover from "../../components/profile-cover";
+import { get } from "../../services/api-client";
 import { Comic } from "../../interface/Comic";
 import { Character } from "../../interface/Character";
-import Title from "../../shared/title/Title";
-import Container from "../../shared/container/Container";
-import StackGrid from "../../shared/stack-grid";
-import HeroBox from "../../shared/hero-box";
+import Title from "../../components/title/Title";
+import Container from "../../components/container/Container";
+import StackGrid from "../../components/stack-grid";
+import HeroBox from "../../components/hero-box";
 
 export const getStaticPaths = async () => {
   return {
@@ -46,23 +46,17 @@ type CharactersDetailsProps = {
   character: Character;
 };
 
-const CharacterComics = ({ comics }: { comics: Comic[] }) => {
-  return (
-    <StackGrid columns={3}>
-      {comics?.map((comic) => (
-        <HeroBox hero={comic} key={comic.id} url={"comics"} />
-      ))}
-    </StackGrid>
-  );
-};
-
 const CharactersDetails = ({ comics, character }: CharactersDetailsProps) => {
   return (
     <Layout>
       <ProfileCover image={character?.thumbnail} name={character?.name} />
       <Container>
         <Title>All Comics</Title>
-        <CharacterComics comics={comics} />
+        <StackGrid columns={3}>
+          {comics?.map((comic) => (
+            <HeroBox hero={comic} key={comic.id} url={"comics"} />
+          ))}
+        </StackGrid>
       </Container>
     </Layout>
   );

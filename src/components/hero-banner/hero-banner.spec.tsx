@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import HeroBanner from ".";
+import HeroBanner from "./index";
 
 describe("Hero Banner Component", () => {
   it("Should render the Hero Banner", () => {

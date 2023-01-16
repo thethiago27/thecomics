@@ -22,7 +22,7 @@ const SearchInput = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form data-testid="search-input" onSubmit={handleSubmit}>
       <label className={styles.label}>
         <img src="/assets/icons/search.svg" alt="search" />
         <input

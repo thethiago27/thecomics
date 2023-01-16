@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import ComicDescription from ".";
+import ComicDescription from "./index";
 
 describe("Comic Description Component", () => {
   it("Should render the comic description", () => {

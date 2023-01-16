@@ -1,13 +1,13 @@
-import Layout from "../../shared/layout";
-import Container from "../../shared/container/Container";
-import Title from "../../shared/title/Title";
-import ComicDescription from "../../shared/comic-description";
+import Layout from "../../components/layout";
+import Container from "../../components/container/Container";
+import Title from "../../components/title/Title";
+import ComicDescription from "../../components/comic-description";
 import { GetStaticProps } from "next";
-import { get } from "../../shared/api-client";
+import { get } from "../../services/api-client";
 import { Comic } from "../../interface/Comic";
 import { Character } from "../../interface/Character";
-import StackGrid from "../../shared/stack-grid";
-import CharacterImage from "../../shared/character-image";
+import StackGrid from "../../components/stack-grid";
+import CharacterImage from "../../components/character-image";
 
 type ComicDetailsProps = {
   comic: Comic;

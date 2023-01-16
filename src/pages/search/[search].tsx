@@ -1,15 +1,15 @@
-import Layout from "../../shared/layout";
-import Container from "../../shared/container/Container";
-import Title from "../../shared/title/Title";
+import Layout from "../../components/layout";
+import Container from "../../components/container/Container";
+import Title from "../../components/title/Title";
 import { Suspense, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
-import TabButton from "../../shared/tab-button";
-import { get } from "../../shared/api-client";
+import TabButton from "../../components/tab-button";
+import { get } from "../../services/api-client";
 import { Comic } from "../../interface/Comic";
-import HeroBox from "../../shared/hero-box";
-import StackGrid from "../../shared/stack-grid";
-import CharacterImage from "../../shared/character-image";
+import HeroBox from "../../components/hero-box";
+import StackGrid from "../../components/stack-grid";
+import CharacterImage from "../../components/character-image";
 import { Character } from "../../interface/Character";
 
 type SearchTypeTab = "comics" | "characters";

@@ -7,7 +7,7 @@ if (
   !process.env.NEXT_PUBLIC_MARVEL_PRIVATE_KEY
 ) {
   throw new Error(
-    "NEXT_PUBLIC_MARVEL_PUBLIC_KEY and VITE_MARVEL_PUBLIC_KEY must be set"
+    "NEXT_PUBLIC_MARVEL_PUBLIC_KEY and NEXT_PUBLIC_MARVEL_PRIVATE_KEY must be set"
   );
 }
 

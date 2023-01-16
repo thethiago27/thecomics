@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import HeroBox from ".";
+import HeroBox from "./index";
 
 describe("Hero Banner Component", () => {
   it("Should render the Hero Box with comic URL", () => {
