@@ -16,12 +16,14 @@ Front End
     git clone
     npm install
     npm run dev
-    
+
 ```
 
 Configure environment variables in the .env file
 
 NEXT_PUBLIC_MARVEL_PUBLIC_KEY=
 NEXT_PUBLIC_MARVEL_PRIVATE_KEY=
+
+```
 
 ```

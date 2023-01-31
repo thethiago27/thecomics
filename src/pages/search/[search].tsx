@@ -1,16 +1,17 @@
 import Layout from "../../components/layout";
 import Container from "../../components/container/Container";
 import Title from "../../components/title/Title";
-import { Suspense, useMemo, useState, useTransition } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
 import TabButton from "../../components/tab-button";
 import { get } from "../../services/api-client";
 import { Comic } from "../../interface/Comic";
-import Index from "../../components/hero-box";
+import HeroBox from "../../components/hero-box";
 import StackGrid from "../../components/stack-grid";
 import CharacterImage from "../../components/character-image";
 import { Character } from "../../interface/Character";
+import DynamicHead from "../../components/dynamic-head";
 
 type SearchTypeTab = "comics" | "characters";
 
@@ -32,7 +33,6 @@ const Search = () => {
   };
 
   const fetchSelectedTab = useMemo(async () => {
-    console.log("fetchSelectedTab");
     try {
       const response: any =
         searchTab === "comics"
@@ -49,6 +49,7 @@ const Search = () => {
 
   return (
     <Layout>
+      <DynamicHead title={"Search"} description={"Search results"} />
       <Container>
         <Title>Result of your search... {search}</Title>
         <div className={styles.buttons}>
@@ -62,22 +63,20 @@ const Search = () => {
             </TabButton>
           ))}
         </div>
-        <Suspense fallback={<div>Loading...</div>}>
-          {searchTab === "comics" && (
-            <StackGrid columns={3}>
-              {comics.map((comic) => (
-                <Index hero={comic} url="comics" key={comic.id} />
-              ))}
-            </StackGrid>
-          )}
-          {searchTab === "characters" && (
-            <StackGrid columns={3}>
-              {characters.map((character) => (
-                <CharacterImage character={character} key={character.id} />
-              ))}
-            </StackGrid>
-          )}
-        </Suspense>
+        {searchTab === "comics" && (
+          <StackGrid columns={3}>
+            {comics.map((comic) => (
+              <HeroBox hero={comic} url="comics" key={comic.id} />
+            ))}
+          </StackGrid>
+        )}
+        {searchTab === "characters" && (
+          <StackGrid columns={4}>
+            {characters.map((character) => (
+              <CharacterImage character={character} key={character.id} />
+            ))}
+          </StackGrid>
+        )}
       </Container>
     </Layout>
   );

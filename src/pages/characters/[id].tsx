@@ -8,7 +8,6 @@ import Title from "../../components/title/Title";
 import Container from "../../components/container/Container";
 import StackGrid from "../../components/stack-grid";
 import HeroBox from "../../components/hero-box";
-import Head from "next/head";
 import DynamicHead from "../../components/dynamic-head";
 
 export const getStaticPaths = async () => {

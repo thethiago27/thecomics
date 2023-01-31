@@ -26,6 +26,7 @@ const ComicsGrid = ({ comics }: ComicsProps) => {
 const Home = ({ comics }: ComicsProps) => {
   return (
     <Layout>
+      <DynamicHead title={"Home"} description={"Welcome to The Comics"} />
       <HeroBanner
         hero={{
           title: comics[2].title,
@@ -41,6 +42,11 @@ const Home = ({ comics }: ComicsProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
+  context.res.setHeader(
+    "Cache-Control",
+    "public, s-maxage=10, stale-while-revalidate=59"
+  );
+
   const response: any = await get("comics");
 
   return {

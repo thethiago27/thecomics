@@ -15,7 +15,7 @@ const HeroBanner = ({ hero }: HeroBannerProps) => {
     <div className={styles.container}>
       <div className={styles.content}>
         <p>{hero.title}</p>
-        <Link href={`/hero/${hero.id}`}>
+        <Link href={`/comics/${hero.id}`}>
           <span>See more</span>
         </Link>
       </div>
