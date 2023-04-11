@@ -20,7 +20,7 @@ export const CharacterImage = ({ character }: CharacterImageProps) => {
         width={500}
         height={500}
       />
-      <p>{character.name}...</p>
+      <p>{character.name}.....</p>
     </div>
   );
 };
