@@ -13,7 +13,7 @@ jobs:
         with:
           repository: thethiago27/ci-cd
           ref: main
-          ssh-key: ${{ secrets.SSH_KEY }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           path: ci-cd
       - name: Setup Environment
         env:
