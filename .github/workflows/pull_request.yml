@@ -8,14 +8,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Set up environment variables
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          export PULL_REQUEST_NUMBER=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.number')
-          export GITHUB_REPOSITORY=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.repo.full_name')
       - name: Clone script repository with SSH
         uses: actions/checkout@v2
         with:
@@ -23,7 +15,18 @@ jobs:
           ref: main
           ssh-key: ${{ secrets.SSH_KEY }}
           path: ci-cd
+      - name: Setup Environment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         run: |
-          export SCRIPT_PATH=$(realpath script-repo/script.sh)
-      - name: Execute script
-        run: sh $SCRIPT_PATH
+          export PULL_REQUEST_NUMBER=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.number')
+          export GITHUB_REPOSITORY=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.repo.full_name')
+          export GITHUB_SHA=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.sha')
+          export GITHUB_REF=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.ref')
+      - name: Run script
+        run: |
+          echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
+          cd ci-cd
+          ./run.sh
