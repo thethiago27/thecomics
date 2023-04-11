@@ -20,13 +20,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-        run: |
-          export PULL_REQUEST_NUMBER=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.number')
-          export GITHUB_REPOSITORY=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.repo.full_name')
-          export GITHUB_SHA=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.sha')
-          export GITHUB_REF=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.ref')
+          PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
+          GITHUB_REF: ${{ github.event.pull_request.head.ref }}
       - name: Run script
         run: |
           echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
           cd ci-cd
-          ./run.sh
+          ./pull_request.sh
