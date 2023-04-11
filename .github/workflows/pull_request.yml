@@ -33,4 +33,4 @@ jobs:
         run: |
           echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
           cd ci-cd
-          chmod +x pull_request.sh
+          chmod +x ./pull_request.sh
