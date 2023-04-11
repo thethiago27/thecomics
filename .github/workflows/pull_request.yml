@@ -11,7 +11,7 @@ jobs:
       - name: Clone script repository with SSH
         uses: actions/checkout@v2
         with:
-          repository: ci-cd
+          repository: thethiago27/ci-cd
           ref: main
           ssh-key: ${{ secrets.SSH_KEY }}
           path: ci-cd
