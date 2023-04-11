@@ -19,9 +19,14 @@ jobs:
       - name: Clone script repository
         uses: actions/checkout@v2
         with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
           repository: thethiago27/ci-cd
           ref: main
           path: ci-cd
+        run: |
+          ssh-agent -s
+          ssh-add <(echo "$SSH_KEY")
+          git clone git@github.com:thethiago27/ci-cd.git ./ci-cd
       - name: Set script path
         run: |
           export SCRIPT_PATH=$(realpath script-repo/script.sh)
