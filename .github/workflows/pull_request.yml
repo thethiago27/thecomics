@@ -16,18 +16,13 @@ jobs:
         run: |
           export PULL_REQUEST_NUMBER=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.number')
           export GITHUB_REPOSITORY=$(echo "$GITHUB_EVENT_PATH" | jq -r '.pull_request.head.repo.full_name')
-      - name: Clone script repository
+      - name: Clone script repository with SSH
         uses: actions/checkout@v2
         with:
-          ssh-private-key: ${{ secrets.SSH_KEY }}
-          repository: thethiago27/ci-cd
+          repository: ci-cd
           ref: main
+          ssh-key: ${{ secrets.SSH_KEY }}
           path: ci-cd
-        run: |
-          ssh-agent -s
-          ssh-add <(echo "$SSH_KEY")
-          git clone git@github.com:thethiago27/ci-cd.git ./ci-cd
-      - name: Set script path
         run: |
           export SCRIPT_PATH=$(realpath script-repo/script.sh)
       - name: Execute script
