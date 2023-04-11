@@ -4,29 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="183dbbae-260b-4aa1-b381-910af75c0c22" name="Changes" comment="feat: add new test">
+    <list default="true" id="183dbbae-260b-4aa1-b381-910af75c0c22" name="Changes" comment="chore: fix ci">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/pull_request.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pull_request.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/character-image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-image/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/comic-description/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/comic-description/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero-banner/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero-banner/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero-box/HeroBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero-box/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero-box/hero-box.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero-box/hero-box.spec.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero-box/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/characters/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/characters/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/characters/character.spec.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/comics/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/comics/[id].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/search/[search].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/search/[search].tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="LPJ" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -41,17 +34,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/thiago/thecomics/__test__",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Thiag/thecomics",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "/home/thiago/thecomics/node_modules/jest",
-    "nodejs_interpreter_path": "/home/thiago/.nvm/versions/node/v16.16.0/bin/node",
+    "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/home/thiago/thecomics/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
-    "ts.external.directory.path": "/home/thiago/thecomics/node_modules/typescript/lib",
+    "ts.external.directory.path": "C:\\Users\\Thiag\\AppData\\Local\\JetBrains\\Toolbox\\apps\\Aqua\\ch-0\\231.8495\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -73,7 +67,6 @@
   <component name="RunManager" selected="Jest.Characters Details Page">
     <configuration name="Characters Details Page" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -86,7 +79,6 @@
     </configuration>
     <configuration name="Github Button Component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -99,7 +91,6 @@
     </configuration>
     <configuration name="Github Button Component.Should redirect correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -113,7 +104,6 @@
     </configuration>
     <configuration name="Github Button Component.Should render the Github Button with the correct link" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -127,7 +117,6 @@
     </configuration>
     <configuration name="Navbar Component.Should render the GithubButton Component" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
-      <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
@@ -141,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.Characters Details Page" />
-        <item itemvalue="Jest.Github Button Component" />
-        <item itemvalue="Jest.Github Button Component.Should redirect correctly" />
-        <item itemvalue="Jest.Github Button Component.Should render the Github Button with the correct link" />
         <item itemvalue="Jest.Navbar Component.Should render the GithubButton Component" />
+        <item itemvalue="Jest.Github Button Component.Should render the Github Button with the correct link" />
+        <item itemvalue="Jest.Github Button Component.Should redirect correctly" />
+        <item itemvalue="Jest.Github Button Component" />
+        <item itemvalue="Jest.Characters Details Page" />
       </list>
     </recent_temporary>
   </component>
@@ -171,6 +160,7 @@
       <workItem from="1673654927750" duration="4000" />
       <workItem from="1673654944251" duration="609000" />
       <workItem from="1673892935752" duration="6395000" />
+      <workItem from="1681237828449" duration="934000" />
     </task>
     <task id="LOCAL-00001" summary="feat: add readme.me">
       <created>1672854674951</created>
@@ -207,7 +197,105 @@
       <option name="project" value="LOCAL" />
       <updated>1673894723688</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: fix">
+      <created>1681226992348</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681226992348</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add new module">
+      <created>1681227514500</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1681227514500</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: add new module m">
+      <created>1681227834583</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681227834583</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: fix ci">
+      <created>1681228045319</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228045319</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: fix ci">
+      <created>1681228179315</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228179315</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: fix ci">
+      <created>1681228529593</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228529593</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: fix clp">
+      <created>1681228679763</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681228679763</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: fix clp">
+      <created>1681229095249</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681229095249</updated>
+    </task>
+    <task id="LOCAL-00014" summary="feat: fix clp">
+      <created>1681229167325</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681229167325</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: fix checkout">
+      <created>1681229850765</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681229850765</updated>
+    </task>
+    <task id="LOCAL-00016" summary="feat: teste 34">
+      <created>1681229941916</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681229941916</updated>
+    </task>
+    <task id="LOCAL-00017" summary="chore: fix ci">
+      <created>1681237954617</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681237954617</updated>
+    </task>
+    <task id="LOCAL-00018" summary="chore: fix ci">
+      <created>1681238027910</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681238027910</updated>
+    </task>
+    <task id="LOCAL-00019" summary="chore: fix ci">
+      <created>1681238715788</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681238715788</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +306,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="lpol" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -229,7 +329,15 @@
     <MESSAGE value="chore: ts errors fix" />
     <MESSAGE value="refactor: build with nextjs" />
     <MESSAGE value="feat: add new test" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add new test" />
+    <MESSAGE value="feat: fix" />
+    <MESSAGE value="feat: add new module" />
+    <MESSAGE value="feat: add new module m" />
+    <MESSAGE value="feat: fix ci" />
+    <MESSAGE value="feat: fix clp" />
+    <MESSAGE value="feat: fix checkout" />
+    <MESSAGE value="feat: teste 34" />
+    <MESSAGE value="chore: fix ci" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: fix ci" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -242,7 +350,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/navbar/navbar.spec.tsx</url>
           <line>36</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

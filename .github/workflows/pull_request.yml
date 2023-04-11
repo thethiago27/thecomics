@@ -23,6 +23,10 @@ jobs:
           PULL_REQUEST_NUMBER: ${{ github.event.pull_request.number }}
           GITHUB_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
           GITHUB_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
+          echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
+          echo "GITHUB_REF: $GITHUB_REF"
       - name: Run script
         run: |
           echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
