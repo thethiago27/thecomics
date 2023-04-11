@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="183dbbae-260b-4aa1-b381-910af75c0c22" name="Changes" comment="chore: fix ci">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/pull_request.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/pull_request.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/character-image/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/character-image/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +15,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="LPJ" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "teste22",
     "last_opened_file_path": "C:/Users/Thiag/thecomics",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -295,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681238715788</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="chore: fix ci">
+      <created>1681238942530</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681238942530</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +318,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lpol" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
