@@ -14,7 +14,7 @@ jobs:
           repository: ci-cd
           ref: main
           ssh-key: ${{ secrets.SSH_KEY }}
-          path: ci-cd
+          path: thethiago27/ci-cd
       - name: Setup Environment
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
