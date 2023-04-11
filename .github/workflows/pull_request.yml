@@ -29,7 +29,6 @@ jobs:
           echo "GITHUB_REF: $GITHUB_REF"
       - name: Run script
         run: |
-          chmod +x pull_request.sh
           echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
           cd ci-cd
-          ./pull_request.sh
+          chmod +x pull_request.sh
