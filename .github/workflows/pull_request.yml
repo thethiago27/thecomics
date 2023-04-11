@@ -24,6 +24,8 @@ jobs:
           GITHUB_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
           GITHUB_REF: ${{ github.event.pull_request.head.ref }}
         run: |
+          sudo apt-get update
+          sudo apt-get install -y jq
           echo "PULL_REQUEST_NUMBER: $PULL_REQUEST_NUMBER"
           echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
           echo "GITHUB_REF: $GITHUB_REF"
